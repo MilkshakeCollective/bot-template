@@ -29,7 +29,7 @@ function sendErrorToWebhook(title: string, details?: string) {
 
 export function loadCrashHandler() {
 	if (!ENABLE_CRASH_HANDLER) {
-		logger.info('⚙️ Crash handler disabled by config.');
+		logger.info('Crash handler disabled by config.');
 		return;
 	}
 
