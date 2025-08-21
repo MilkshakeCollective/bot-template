@@ -1,4 +1,4 @@
-import { CoffeeClient } from '../index.js';
+import { MilkshakeClient } from '../index.js';
 import { CommandInterface, ObjectNameIDArray } from '../types.js';
 import { ApplicationCommandDataResolvable, ApplicationCommandType, Events } from 'discord.js';
 import { fileURLToPath, pathToFileURL } from 'node:url';
@@ -7,7 +7,7 @@ import { readdirSync } from 'node:fs';
 import { stat } from 'node:fs/promises';
 import { logger } from '../components/exports.js';
 
-export async function loadCommands(client: CoffeeClient) {
+export async function loadCommands(client: MilkshakeClient) {
 	let contextCommandsArray: Array<ApplicationCommandDataResolvable> = [];
 	let contextCommandsDevArray: Array<ApplicationCommandDataResolvable> = [];
 	let commandsArray: Array<ApplicationCommandDataResolvable> = [];

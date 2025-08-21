@@ -1,7 +1,12 @@
-import { CoffeeClient } from '../../index.js';
+import { MilkshakeClient } from '../../index.js';
 import { Snowflake } from 'discord.js';
 
-export function hasRoles(client: CoffeeClient, guildId: Snowflake, userId: Snowflake, roles: Snowflake | Snowflake[]) {
+export function hasRoles(
+	client: MilkshakeClient,
+	guildId: Snowflake,
+	userId: Snowflake,
+	roles: Snowflake | Snowflake[],
+) {
 	const guild = client.guilds.cache.get(guildId);
 	if (guild && userId) {
 		const member = guild.members.cache.get(userId);

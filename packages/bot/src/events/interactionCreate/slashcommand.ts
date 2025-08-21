@@ -1,4 +1,4 @@
-import { CoffeeClient } from '../../index.js';
+import { MilkshakeClient } from '../../index.js';
 import { logger } from '../../components/exports.js';
 import { CommandInterface, EventInterface } from '../../types.js';
 import { ChatInputCommandInteraction, EmbedBuilder, Events } from 'discord.js';
@@ -8,7 +8,7 @@ const cooldowns: Map<string, Map<string, number>> = new Map();
 const event: EventInterface = {
 	name: Events.InteractionCreate,
 	options: { once: false, rest: false },
-	execute: async (interaction: ChatInputCommandInteraction, client: CoffeeClient) => {
+	execute: async (interaction: ChatInputCommandInteraction, client: MilkshakeClient) => {
 		if (!interaction.isChatInputCommand()) return;
 
 		const command: CommandInterface | undefined = client.commands.get(interaction.commandName);

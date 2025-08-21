@@ -1,4 +1,4 @@
-import { CoffeeClient } from '../../../index.js';
+import { MilkshakeClient } from '../../../index.js';
 import { CommandInterface } from '../../../types.js';
 import {
 	ContextMenuCommandBuilder,
@@ -14,7 +14,7 @@ const command: CommandInterface = {
 		.setName('Send Message')
 		.setType(ApplicationCommandType.Message)
 		.setDefaultMemberPermissions(PermissionFlagsBits.ViewChannel),
-	execute: async (interaction: ContextMenuCommandInteraction, client: CoffeeClient) => {
+	execute: async (interaction: ContextMenuCommandInteraction, client: MilkshakeClient) => {
 		if (!interaction.isMessageContextMenuCommand()) return;
 
 		const messageTargetId = interaction.targetId;

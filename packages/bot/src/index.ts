@@ -6,7 +6,7 @@ import { loadCommands } from './handlers/commands.js';
 import { loadEvents } from './handlers/events.js';
 import { logger } from './components/exports.js';
 
-export class CoffeeClient extends Client {
+export class MilkshakeClient extends Client {
 	public events: Collection<string, EventInterface> = new Collection();
 	public commands: Collection<string, CommandInterface> = new Collection();
 	public context: Collection<string, CommandInterface> = new Collection();
@@ -53,7 +53,7 @@ export class CoffeeClient extends Client {
 
 	public async InitializeClient() {
 		try {
-			loadCrashHandler()
+			loadCrashHandler();
 			await loadEvents(this);
 			await loadCommands(this);
 		} catch (error) {
@@ -70,4 +70,4 @@ export class CoffeeClient extends Client {
 	}
 }
 
-new CoffeeClient().InitializeClient();
+new MilkshakeClient().InitializeClient();
